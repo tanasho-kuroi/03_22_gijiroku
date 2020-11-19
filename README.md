@@ -1,5 +1,9 @@
 # 議事録ツール
 
+## デプロイ先
+
+https://tanasho-kuroi.github.io/03_22_gijiroku/
+
 ## プロダクトの紹介
 
 -  シンプルな議事録ツール
