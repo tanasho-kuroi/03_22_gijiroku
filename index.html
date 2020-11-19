@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>議事録</title>
+      <link rel="stylesheet" href="css/sample.css" />
+   </head>
+
+   <body>
+      <header>
+         <h1>シンプルに議事録</h1>
+      </header>
+
+      <div class="manual">
+      <h3>使い方</h3>
+      <p class="manual_text">
+         「出席者＊」に出席者の名前を入力 </br>
+         「発言内容」に発言内容を記録 </br>
+         「Ctrl + 出席者No. 」を押すと、自動で発言内容が記録される </br>
+         「出席者Save」で出席者を保存できる。「出席者Load」で保存した出席者を出力</br>
+      </p>
+      </div>
+
+      <h3>出席者リスト</h3>
+      <div class="participant_list">
+         <div class="member_number">出席者1</div>
+         <div class="member_name"><input type="text" id="member1" /></div>
+         <div class="member_number">出席者2</div>
+         <div class="member_name"><input type="text" id="member2" /></div>
+         <div class="member_number">出席者3</div>
+         <div class="member_name"><input type="text" id="member3" /></div>
+         <div class="member_number">出席者4</div>
+         <div class="member_name"><input type="text" id="member4" /></div>
+      </div>
+
+      <main>
+         <h3>発言内容</h3>
+         <textarea id="text_area"></textarea>
+         <ul>
+            <li id="save1">出席者Save</li>
+            <li id="load1">出席者Load</li>
+            <li id="clear">Text Clear</li>
+            <li id="clear_all">Clear All</li>
+         </ul>
+
+         <!-- <form action="" name="SpeakerList">
+            <p class="css-speaker-list">発言者：
+                <select name="speaker" id="js-speaker-select">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                </select>
+            </p>
+        </form>
+        <input type="button" value="発言者確認" onclick="clickBtn1()">
+        <p id="speakerOutput"></p> -->
+
+
+        <!-- 発言者の選択をしようとした -->
+         <!--  <select name="speaker" id="js-speaker-select">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+         </select>
+         <p id="speakerOutput"></p>
+      </main> -->
+
+<!-- 出力エリア確保 -->
+      <div class="minute_output">
+
+         <p class="minute_output_area"></p>
+
+      </div>
+
+      <!-- <footer>
+         <small>G's</small>
+      </footer>  -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- minute.js にJaca Script処理を書き込み -->
+      <script src="js/minute.js"></script>
+   </body>
+</html>

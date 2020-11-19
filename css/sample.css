@@ -1,0 +1,88 @@
+body {
+   margin: 0;
+   padding: 0;
+   text-align: left;
+   font-size: 32px;
+   width: 960px;
+}
+header {
+   background-color: #fff;
+   border-bottom: 1px solid #ccc;
+   text-align: center;
+}
+.manual {
+   text-align: center;
+}
+.manual_text {
+   font-size: 18px;
+   display: inline-block;
+   text-align: left;
+}
+h3 {
+   text-align: center;
+}
+
+main {
+   border-bottom: 1px solid #ccc;
+   position: relative;
+   font-size: 24px;
+}
+footer {
+   background-color: #fff;
+   border-bottom: 1px solid #ccc;
+   text-align: center;
+}
+p {
+   font-size: 200%;
+   text-align: center;
+   border-bottom: 1px solid #fff;
+   height: 200px;
+}
+ul {
+   padding: 0;
+   border-top: 1px solid #000000;
+   display: table; /* 定義 */
+   table-layout: fixed;
+   width: 100%;
+}
+li {
+   list-style-type: none;
+   border: 1px solid #666;
+   background-color: #fff;
+   display: table-cell; /* 定義 */
+   cursor: pointer;
+}
+li:hover {
+   background: #0066cc;
+   color: #fff;
+}
+input,
+textarea {
+   margin: 3%;
+   width: 95%;
+   font-size: 80%;
+   box-shadow: 3px 3px 3px 3px #555;
+   margin-top: 0px;
+}
+input {
+   height: 24px;
+}
+textarea {
+   height: 230px;
+}
+
+.participant_list {
+   display: flex;
+   flex-wrap: wrap;
+   width: 80%;
+   align-items: center;
+   justify-content: flex-end;
+}
+.member_number {
+   width: 20%;
+   font-size: 24px;
+   justify-content: flex-end;
+}
+.member_name {
+   width: 70%;
+}
