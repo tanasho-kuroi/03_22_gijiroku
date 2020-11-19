@@ -35,101 +35,12 @@ $(function () {
 
    $('#text_area').keypress(function (e) {
       if (event.ctrlKey) {
-         if (e.which == 49) {
+         if (e.which == 49 || 50 || 51 || 52) {
             //発言者情報の取得
-            const talker = $('#member1').val();
-
-            //この分岐、ORでやって更にif,caseを重ねようとすると、2回目のifの中で終わってしまう。できないか？
-            //    if (e.which == 49||e.which == 50||e.which == 51||e.which == 52) {
-            //   switch (e.which) {
-            //     case 49:
-            //        const talker = $('#member1').val();
-            //        break;
-            //     case 50:
-            //        const talker = $('#member2').val();
-            //        break;
-            //     case 51:
-            //        const talker = $('#member3').val();
-            //        break;
-            //     case 52:
-            //        const talker = $('#member4').val();
-            //        break;
-            //    }
-
-            //時刻情報の取得
-            const date = new Date();
-            const year = date.getFullYear();
-            const month = date.getMonth();
-            const day = date.getDate();
-            const hour = date.getHours();
-            const minutes = date.getMinutes();
-            const seconds = date.getSeconds();
-            const time = `${hour}:${minutes}:${seconds}`;
-            console.log(time);
-
-            //.val()でtext取得
-            const data = $('#text_area').val();
-
-            const jsonData = JSON.stringify(data); //配列をJSONdata(文字列)変換
-            localStorage.setItem('memo' + i, time + ' ' + talker + ' ' + jsonData); // localstorageに保存
-            i++; //key名の末尾＋１
-            //  const title = $('#input').val(''); // .val('')で上書き
-            const text = $('#text_area').val(''); // テキストエリア削除　.val('')で上書き
-
-            return false;
-         } else if (e.which == 50) {
-            //発言者情報の取得
-            const talker = $('#member2').val();
-
-            //時刻情報の取得
-            const date = new Date();
-            const year = date.getFullYear();
-            const month = date.getMonth();
-            const day = date.getDate();
-            const hour = date.getHours();
-            const minutes = date.getMinutes();
-            const seconds = date.getSeconds();
-            const time = `${hour}:${minutes}:${seconds}`;
-            console.log(time);
-
-            //.val()でtext取得
-            const data = $('#text_area').val();
-
-            const jsonData = JSON.stringify(data); //配列をJSONdata(文字列)変換
-            localStorage.setItem('memo' + i, time + ' ' + talker + ' ' + jsonData); // localstorageに保存
-            i++; //key名の末尾＋１
-            //  const title = $('#input').val(''); // .val('')で上書き
-            const text = $('#text_area').val(''); // テキストエリア削除　.val('')で上書き
-
-            return false;
-         } else if (e.which == 51) {
-            //発言者情報の取得
-            const talker = $('#member3').val();
-
-            //時刻情報の取得
-            const date = new Date();
-            const year = date.getFullYear();
-            const month = date.getMonth();
-            const day = date.getDate();
-            const hour = date.getHours();
-            const minutes = date.getMinutes();
-            const seconds = date.getSeconds();
-            const time = `${hour}:${minutes}:${seconds}`;
-            console.log(time);
-
-            //.val()でtext取得
-            const data = $('#text_area').val();
-
-            const jsonData = JSON.stringify(data); //配列をJSONdata(文字列)変換
-            localStorage.setItem('memo' + i, time + ' ' + talker + ' ' + jsonData); // localstorageに保存
-            i++; //key名の末尾＋１
-            //  const title = $('#input').val(''); // .val('')で上書き
-            const text = $('#text_area').val(''); // テキストエリア削除　.val('')で上書き
-
-            return false;
-         } else if (e.which == 52) {
-            //発言者情報の取得
-            const talker = $('#member4').val();
+            let talker_num = e.which - 48;
+            console.log(talker_num);
+            // const talker = $('#member1').val();
+            const talker = $('#member' + talker_num).val();
 
             //時刻情報の取得
             const date = new Date();
@@ -232,9 +143,10 @@ $(function () {
 //    }
 // });
 
-var select = document.getElementById('js-speaker-select');
-select.onchange = function () {
-   const num = select.value;
-   $('#speakerOutput').html(num);
-   console.log(num);
-};
+// 発言者選択しようとした
+// var select = document.getElementById('js-speaker-select');
+// select.onchange = function () {
+//    const num = select.value;
+//    $('#speakerOutput').html(num);
+//    console.log(num);
+// };
